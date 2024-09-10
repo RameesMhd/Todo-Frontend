@@ -1,0 +1,46 @@
+.login-container {
+    height: 100%;
+
+    .login-form {
+        gap: 8px;
+        // Create a glass morphism effect
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+
+        img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border: 2px solid #fff;
+        }
+
+        .form-input {
+            gap: 8px;
+
+            input {
+                border-radius: 8px;
+                padding: 6px 12px;
+                border: none;
+            }
+
+            button {
+                width: 50%;
+                border-radius: 8px;
+                padding: 4px 8px;
+            }
+        }
+
+        .frgt-pswd {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+}

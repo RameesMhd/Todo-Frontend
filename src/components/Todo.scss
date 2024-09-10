@@ -1,0 +1,124 @@
+.todo-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    background: rgba(12, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    .email {
+        color: #000;
+        font-size: 12px;
+    }
+
+    .todo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 10px 0 0;
+        color: #ffffff;
+
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+    }
+
+    .todo-input-container {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 12px;
+        padding: 0 10px 0 0;
+
+        .todo-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #0a0a0a;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .todo-add-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .todo-add-button:hover {
+            background-color: #0069d9;
+        }
+    }
+
+    .todo-list {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ffffff;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+
+            .todo-delete-button {
+                padding: 5px 10px;
+                background-color: #ff4444;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .todo-delete-button:hover {
+                background-color: #cc3333;
+            }
+
+        }
+    }
+
+}
+
+.wrapper {
+    background: rgba(12, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 60px;
+    color: #fff;
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.completed {
+    text-decoration: line-through
+}
+
+.header {
+    color: #fff;
+}
