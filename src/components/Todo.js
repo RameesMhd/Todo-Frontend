@@ -14,7 +14,7 @@ export default function Todo() {
     // Fetch todos from the backend
     useEffect(() => {
         async function fetchTodos() {
-            const response = await axios.get(`${apiUrl}/${currentUser.uid}`);
+            const response = await axios.get(`${apiUrl}${currentUser.uid}`);
             setTodos(response.data);
         }
         fetchTodos();
@@ -32,7 +32,7 @@ export default function Todo() {
 
     // Toggle complete status of a todo (mark as active or completed)
     const handleToggleComplete = async (id, completed) => {
-        const response = await axios.patch(`${apiUrl}/${id}`, {
+        const response = await axios.patch(`${apiUrl}${id}`, {
             completed: !completed,
         });
         setTodos(todos.map(todo => (todo._id === id ? response.data : todo)));
@@ -40,7 +40,7 @@ export default function Todo() {
 
     // Delete a todo
     const handleDeleteTodo = async id => {
-        await axios.delete(`${apiUrl}/${id}`);
+        await axios.delete(`${apiUrl}${id}`);
         setTodos(todos.filter(todo => todo._id !== id));
     };
 
