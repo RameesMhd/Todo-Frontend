@@ -11,6 +11,9 @@ export default function Todo() {
     const { currentUser } = useAuth();
     const userEmail = currentUser.email;
 
+    console.log("API URL : ",apiUrl);
+    
+
     // Fetch todos from the backend
     useEffect(() => {
         async function fetchTodos() {
