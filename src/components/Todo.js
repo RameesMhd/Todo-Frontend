@@ -14,7 +14,8 @@ export default function Todo() {
     // Fetch todos from the backend
     useEffect(() => {
         async function fetchTodos() {
-            const response = await axios.get(`${apiUrl}${currentUser.uid}`);
+            const response = await axios.get(`${apiUrl}/${currentUser.uid}`);
+            console.log(response.data);
             setTodos(response.data);
         }
         fetchTodos();
