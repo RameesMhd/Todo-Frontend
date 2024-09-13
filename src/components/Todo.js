@@ -48,11 +48,8 @@ export default function Todo() {
         setTodos(todos.filter(todo => todo._id !== id));
     };
 
-    console.log("*-*-*", todos);
-
     // Filter the todos into active and completed sections
     const activeTodos = todos.filter(todo => !todo.completed);
-    console.log("activeTodos", activeTodos);
 
     const completedTodos = todos.filter(todo => todo.completed);
 
