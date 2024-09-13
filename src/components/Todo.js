@@ -14,8 +14,12 @@ export default function Todo() {
     // Fetch todos from the backend
     useEffect(() => {
         async function fetchTodos() {
-            const response = await axios.get(`${apiUrl}/todos/${currentUser.uid}`);
-            setTodos(response.data);
+            try {
+                const response = await axios.get(`${apiUrl}/todos/${currentUser.uid}`);
+                setTodos(Array.isArray(response.data) ? response.data : []);
+            } catch (error) {
+                console.error("Error fetching todos:", error);
+            }
         }
         fetchTodos();
     }, [currentUser]);
@@ -44,8 +48,12 @@ export default function Todo() {
         setTodos(todos.filter(todo => todo._id !== id));
     };
 
+    console.log("*-*-*", todos);
+
     // Filter the todos into active and completed sections
     const activeTodos = todos.filter(todo => !todo.completed);
+    console.log("activeTodos", activeTodos);
+
     const completedTodos = todos.filter(todo => todo.completed);
 
     return (
