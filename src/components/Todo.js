@@ -26,7 +26,7 @@ export default function Todo() {
 
     // Add a new todo
     const handleAddTodo = async () => {
-        const response = await axios.post(apiUrl, {
+        const response = await axios.post(`${apiUrl}/todos`, {
             userId: currentUser.uid,
             title: newTodo,
         });
