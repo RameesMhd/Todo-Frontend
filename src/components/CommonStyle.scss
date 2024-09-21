@@ -3,7 +3,9 @@
 .home-page {
     width: 100%;
     height: 100vh;
-    background-color: blueviolet;
+    background-image: url('../assets/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .home-page-wrapper {
         width: 100%;
