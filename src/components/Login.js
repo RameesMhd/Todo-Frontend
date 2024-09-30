@@ -22,29 +22,27 @@ export default function Login() {
     }
 
     return (
-        <Container className='login-container'>
-            <Row className='justify-content-center mt-5'>
-                <Col lg={4} md={6} sm={12} className='mt-5'>
-                    <form onSubmit={handleSubmit} className='login-form d-flex flex-column p-2 justify-content-center align-items-center'>
-                        <h1 className='text-center'>Login</h1>
-                        <div>
-                            <label htmlFor='profile'>
-                                <img src={avatar} alt='avatar' className='profile-image' />
-                            </label>
-                        </div>
-                        <div className='form-input d-flex flex-column align-items-center'>
-                            <label>Login Now</label>
-                            <input type="email" ref={emailRef} required placeholder="Email" />
-                            <input type="password" ref={passwordRef} required placeholder="Password" />
-                            <Button type='submit'>Log In</Button>
-                        </div>
-                        <div className='d-flex justify-content-between flex-row gap-2'>
-                            <span>Don't have an account?</span>
-                            <Link to="/register">Sign Up</Link>
-                        </div>
-                    </form>
-                </Col>
-            </Row>
-        </Container>
+        <div className='login-container'>
+            <div className='login-wrapper'>
+                <form onSubmit={handleSubmit} className='login-form d-flex flex-column p-2 justify-content-center align-items-center'>
+                    <h1 className='text-center'>Login</h1>
+                    <div>
+                        <label htmlFor='profile'>
+                            <img src={avatar} alt='avatar' className='profile-image' />
+                        </label>
+                    </div>
+                    <div className='form-input d-flex flex-column align-items-center'>
+                        <label>Login Now</label>
+                        <input type="email" ref={emailRef} required placeholder="Email" />
+                        <input type="password" ref={passwordRef} required placeholder="Password" />
+                        <Button type='submit'>Log In</Button>
+                    </div>
+                    <div className='d-flex justify-content-between flex-row gap-2'>
+                        <span>Don't have an account?</span>
+                        <Link to="/register">Sign Up</Link>
+                    </div>
+                </form>
+            </div>
+        </div>
     );
 }
